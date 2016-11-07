@@ -9,6 +9,7 @@
 import UIKit
 import Firebase
 import FBSDKLoginKit
+import SwiftKeychainWrapper
 
 class ViewController: UIViewController, UITextFieldDelegate {
     
@@ -25,6 +26,10 @@ class ViewController: UIViewController, UITextFieldDelegate {
         FIRMessaging.messaging().subscribe(toTopic: "\topics\news")
         
         navigationController?.navigationBar.isHidden = true
+        
+        if (KeychainWrapper.standard.string(forKey: "FB_UID") != nil) || (KeychainWrapper.standard.string(forKey: "EMAIL_UID") != nil) {
+            print("El usuario ya se había logueado anteriormente")
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -64,12 +69,15 @@ class ViewController: UIViewController, UITextFieldDelegate {
                                 } else {
                                     //Ir al siguiente VC.
                                     print("Login Email exitoso")
+                                    
+                                    KeychainWrapper.standard.set(user!.uid, forKey: "EMAIL_UID")
                                 }
                             }
                         })
                     }
                 } else {
                     print("Usuario: \(user?.displayName)")
+                    
                 }
             })
         } else {
@@ -107,6 +115,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
                 print("No se pudo autenticar con Firebase: Error: \(error.debugDescription)")
             } else {
                 print("Se autenticó con éxito con Firebase")
+                KeychainWrapper.standard.set(user!.uid, forKey: "FB_UID")
             }
         })
     }
