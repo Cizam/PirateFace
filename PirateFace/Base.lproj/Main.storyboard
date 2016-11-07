@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="OPQ-xk-kil">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PirateFace" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l4T-VU-V6N">
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Si no tienes un usuario creado, automáticamente se creará uno." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kvV-eO-LJU">
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="285" id="nYI-as-6E9"/>
+                                            <constraint firstAttribute="height" constant="46" id="xoF-EK-RQc"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.54493189109999995" green="0.26069668769999998" blue="0.3605856328" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="kvV-eO-LJU" firstAttribute="centerX" secondItem="l4T-VU-V6N" secondAttribute="centerX" id="gYC-I9-IfU"/>
+                                    <constraint firstAttribute="height" constant="62" id="nU0-nJ-E9k"/>
+                                    <constraint firstItem="kvV-eO-LJU" firstAttribute="centerY" secondItem="l4T-VU-V6N" secondAttribute="centerY" id="yet-6s-36S"/>
+                                </constraints>
+                            </view>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Correo electrónico" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TaQ-68-8b6" customClass="SexyTextField" customModule="PirateFace" customModuleProvider="target">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="waF-pK-gnC"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BvK-rp-DO0" customClass="SexyTextField" customModule="PirateFace" customModuleProvider="target">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="jo1-Qx-8WF"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sGb-3S-Cex" customClass="LoginHeaderView" customModule="PirateFace" customModuleProvider="target">
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="telstock_logo" translatesAutoresizingMaskIntoConstraints="NO" id="9qv-1K-1yC">
+                                        <color key="backgroundColor" red="0.54493189109999995" green="0.26069668769999998" blue="0.3605856328" alpha="1" colorSpace="calibratedRGB"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="9qv-1K-1yC" firstAttribute="top" secondItem="sGb-3S-Cex" secondAttribute="top" id="1EC-XO-83N"/>
+                                    <constraint firstAttribute="height" constant="112" id="bsB-BS-Nin"/>
+                                    <constraint firstItem="9qv-1K-1yC" firstAttribute="leading" secondItem="sGb-3S-Cex" secondAttribute="leading" id="dNd-f8-sjI"/>
+                                    <constraint firstAttribute="bottom" secondItem="9qv-1K-1yC" secondAttribute="bottom" id="lj8-Xx-YNT"/>
+                                    <constraint firstAttribute="trailing" secondItem="9qv-1K-1yC" secondAttribute="trailing" id="u46-Sr-eCB"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uiY-JE-kga" customClass="LoginButton" customModule="PirateFace" customModuleProvider="target">
+                                <color key="backgroundColor" red="0.54493189109999995" green="0.26069668769999998" blue="0.3605856328" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="4Ao-Cx-wMF"/>
+                                </constraints>
+                                <state key="normal" title="Iniciar Sesión">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="emailBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ckp-4y-TNl"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kwz-6b-vXD">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="182" id="FKY-yQ-fZQ"/>
+                                    <constraint firstAttribute="height" constant="161" id="eIX-TH-F5n"/>
+                                </constraints>
+                                <state key="normal" image="facebook_logo">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="faceBookBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aiB-1u-ns0"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="TaQ-68-8b6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="4VA-4i-dmQ"/>
+                            <constraint firstItem="Kwz-6b-vXD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5wX-hB-iNx"/>
+                            <constraint firstItem="uiY-JE-kga" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="8xl-2s-Va5"/>
+                            <constraint firstItem="BvK-rp-DO0" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="CDH-fQ-ghd"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="l4T-VU-V6N" secondAttribute="bottom" id="DC5-Sn-UDC"/>
+                            <constraint firstAttribute="trailing" secondItem="l4T-VU-V6N" secondAttribute="trailing" id="F4N-HK-a1P"/>
+                            <constraint firstItem="uiY-JE-kga" firstAttribute="top" secondItem="BvK-rp-DO0" secondAttribute="bottom" constant="42" id="Iy3-az-bVG"/>
+                            <constraint firstItem="sGb-3S-Cex" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Qe5-IS-GmK"/>
+                            <constraint firstItem="uiY-JE-kga" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="S8C-eD-IeB"/>
+                            <constraint firstItem="l4T-VU-V6N" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="dJC-YQ-bMG"/>
+                            <constraint firstItem="TaQ-68-8b6" firstAttribute="top" secondItem="Kwz-6b-vXD" secondAttribute="bottom" constant="21" id="e7v-Om-Ggc"/>
+                            <constraint firstItem="TaQ-68-8b6" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="fCz-Ex-rDr"/>
+                            <constraint firstAttribute="trailing" secondItem="sGb-3S-Cex" secondAttribute="trailing" id="kFP-pA-eU0"/>
+                            <constraint firstItem="BvK-rp-DO0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="mJp-oS-C3V"/>
+                            <constraint firstItem="sGb-3S-Cex" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="mdB-eM-W1J"/>
+                            <constraint firstItem="Kwz-6b-vXD" firstAttribute="top" secondItem="sGb-3S-Cex" secondAttribute="bottom" constant="16" id="sOu-yK-tho"/>
+                            <constraint firstItem="BvK-rp-DO0" firstAttribute="top" secondItem="TaQ-68-8b6" secondAttribute="bottom" constant="26" id="ykN-le-2qD"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="WBN-nj-3ls"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="txtPassword" destination="BvK-rp-DO0" id="Lme-vl-mIT"/>
+                        <outlet property="txtUsuario" destination="TaQ-68-8b6" id="zsy-H5-xNm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1061.5999999999999" y="-564.46776611694156"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Z8g-Sx-Nrw">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="OPQ-xk-kil" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="6xJ-Fp-fji">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Mc0-aP-48d"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="09k-QI-7rF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="181.59999999999999" y="-564.46776611694156"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="facebook_logo" width="151" height="151"/>
+        <image name="telstock_logo" width="1188" height="600"/>
+    </resources>
+</document>
